@@ -1,0 +1,63 @@
+
+Public class Produto {
+	
+String nome;
+double preco;
+double desconto;
+
+}
+
+Public class ProdutoTeste{ 
+	public static void main(String)[] args {
+	
+	Produto p1 = new Produto();
+	p1.nome = "Notebook";
+	p1.preco = 4356.89;
+	p1.desconto = 0.25;
+
+	var p2 = new Produto();
+	p2.nome = "Caneta Preta";
+	p2.preco = 12.56;
+	p2.desconto = 0.29;
+
+	System.out.println(p1.nome);
+	System.out.println(p2.nome);
+
+	double precoFinal1 = p1.preco * (1 - p1.desconto);
+	double precoFinal2 = p2.preco * (1 - p2.desconto);
+	double mediaCarrinho = (precoFinal1 + precoFinal2 / 2);
+	System.out.printf("Média do carrinho = R$%.2f", mediaCarrinho);
+	
+
+	}
+
+}
+
+
+Public class Data{
+	int dia;
+	int mes;
+	int ano;
+
+}
+
+
+Public Class DataTeste{
+	public static void main(String)[] args {
+
+	Data d1 = new Data();
+	d1.dia = 12;
+	d1.mes = 08;
+	d1.ano = 1985;
+
+	System.out.printf("%d/%d/%d\n", d1.dia, d1.mes, d1.ano);
+
+	var d2 = new Data();
+	d2.dia = 31;
+	d2.mes = 12;
+	d2.ano = 2020;
+	
+	System.out.printf("%d/%d/%d", d2.dia, d2.mes, d2.ano);
+	
+}
+

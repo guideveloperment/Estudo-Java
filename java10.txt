@@ -1,1 +1,52 @@
-kkkkkkkkkk
+show databases-> mostra os bancos criados
+create database -> cria o banco
+use-> aponta para o banco de dados
+desc table->nome da tabela exibe o que tem na tabela ex: desc cadastro_clientes_pf ;
+
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+SELECT user,authentication_string,plugin,host FROM mysql.user;
+quit-> zera a pagina e ; divide o bloco
+
+mysql -uroot -proot / mysql -uadmin -padmin -> para entrar com os usuarios
+
+
+select id_jogador ,
+		nm_jogador 
+from tb_jogador
+where id_jogador = 1
+
+
+==================================================================================================================================
+
+
+
+cadastro cliente PF-
+cadastro cliente PJ-
+pedido vendas -
+caixa -
+cupom fiscal-
+notas fiscais -
+cadastro despesa - 
+pagamento despesa -
+cadastro de lojas -
+cadastro funcionários - 
+setor -
+cadastro fornecedor -
+categoria -
+nao pereciveis-
+pereciveis-
+higiene e limpeza-
+produtos - 
+compra produtos - 
+fornecedor compra produtos- 
+entrega de vendas - 
+recebimento de vendas web -
+
+
+
+
+
+
+
+
+

@@ -20,30 +20,104 @@ where id_jogador = 1
 
 
 
-cadastro cliente PF-
-cadastro cliente PJ-
-pedido vendas -
-caixa -
-cupom fiscal-
-notas fiscais -
-cadastro despesa - 
-pagamento despesa -
-cadastro de lojas -
-cadastro funcionários - 
-setor -
-cadastro fornecedor -
-categoria -
-nao pereciveis-
-pereciveis-
-higiene e limpeza-
-produtos - 
-compra produtos - 
-fornecedor compra produtos- 
-entrega de vendas - 
-recebimento de vendas web -
+atalhos do eclispe
+crlt + m
+identar 
+ctrl + shift + f
+"". ==> para chamar as strings
+colocando o curso na linha e ctrl + alt + seta vc duplica as linhas 
+colocando o cursos na linha e alt vc move a linha pra cima ou pra baixo
+eclipse-workspace
+ctrl + D ==> apaga a linha
+para comentar blocos no eclipse ==> ctrl + shift + c
+método estático vc consegue acessar da classe sem criar objeto
+https://www.rlsystem.com.br/curso-java-gratis/
 
 
 
+==============================================================================================================
+
+
+
+
+-- DELETE : comando SQL para excluir / deletar registros na tabela
+
+delete from categoria 
+where codigo_categoria =4
+;
+
+
+delete from categoria 
+where codigo_categoria = 13
+;
+
+
+-- modo group by full
+
+
+
+select @@session.sql_mode, @@global.sql_mode ;
+
+
+SET @@session.sql_mode = (SELECT CONCAT(@@session.sql_mode, ',ONLY_FULL_GROUP_BY')) ;
+SET @@global.sql_mode = (SELECT CONCAT(@@global.sql_mode, ',ONLY_FULL_GROUP_BY')) ;
+
+
+drop table CADASTRO_CLIENTES_PF,-/
+drop table CADASTRO_CLIENTES_PJ,-/
+drop table FUNCIONARIO,/
+drop table CAIXA,-/
+drop table DESPESA, -/
+drop table CATEGORIA,-/
+drop table LOJA,-/
+drop table FORNECEDOR,-/
+drop table SETOR,-/
+drop table PRODUTO,-/
+drop table RECEBIMENTO,-/
+drop table PEDIDO_VENDAS,/
+drop table NOTA_FISCAL,-/
+drop table CUPOM_FISCAL,-/
+drop table PAGAMENTO_DESPESA,-
+drop table ENTREGA_VENDAS;-
+
+
+
+loja
+nota fiscal
+pedido_vendas
+produto
+categoria
+despesa
+fornecedor
+caixa
+cadastro_cliente_pj
+cadastro_cliente_pf
+
+
+
+
+
+drop table CUPOM_FISCAL;
+
+
+
+
+
+
+
+
+drop table PAGAMENTO_DESPESA;
+drop table SETOR;
+
+
+
+
+drop table RECEBIMENTO;
+
+
+
+
+drop table LOJA;
 
 
 

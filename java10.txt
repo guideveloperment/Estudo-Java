@@ -119,8 +119,12 @@ drop table RECEBIMENTO;
 
 drop table LOJA;
 
+============================================================
 
-
+git add .
+git status
+git push commit -m "xxxxxx"
+git push origin master
 
 
 

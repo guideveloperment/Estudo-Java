@@ -35,7 +35,7 @@ https://www.rlsystem.com.br/curso-java-gratis/
 
 
 
-==============================================================================================================
+==============================================================================================================>>>>>>
 
 
 
@@ -125,6 +125,32 @@ git add .
 git status
 git push commit -m "xxxxxx"
 git push origin master
+=================================================================
+cd DevCars
+git clone e copiar endereco
+cd nome da pasta DevCars
+git add . 
+git commit -m "xxxxxx"
+git push origin master
+
+========================================================
+
+
+git clone + endereco do github
+cd DevCars
+git checkout Guilherme
+git add .
+git commit -m "xxxx"
+git push origin Guilherme ou master
+
+==============================
+
+        
+                                    <div class="col text-center">
+                                        <button class="send" type="submit">Enviar</button>
+                                    </div>
+
+
 
 
 

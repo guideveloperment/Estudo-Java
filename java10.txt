@@ -143,12 +143,330 @@ git add .
 git commit -m "xxxx"
 git push origin Guilherme ou master
 
-==============================
+===================================================
 
-        
-                                    <div class="col text-center">
-                                        <button class="send" type="submit">Enviar</button>
-                                    </div>
+
+tabela notaFiscal
+cod_ notaFiscal(PK)
+cod_venda(FK)
+Razao social
+CNPJ/CPF
+Telefone
+Endereço
+Número
+Bairro
+Estado
+Cidade
+CEP
+E-mail
+Inscrição Estadual
+
+==================================================
+
+CABECALHO_NF
+
+codigo_nota (PK) - NOT NULL
+cod_cliente (FK) - NULL
+cod_loja (FK) - NULL
+numero_nota - NOT NULL
+chave_acesso - NOT NULL
+numero_serie - NOT NULL
+valor_total_nf - NOT NULL
+data_emissao_nf - NOT NULL
+
+
+
+
+
+ITEM_NF
+codigo_nota (FK) - NOT NULL
+cod_produto (PK, FK) - NOT NULL
+valor_unitario - NOT NULL
+qtd_produto_nf - NOT NULL
+percentual_icms - NOT NULL
+valor_icms - NOT NULL
+
+
+cod_venda(FK)
+CNPJ/CPF
+Telefone
+cod_endereco
+cabecalho_notaFiscal
+
+chassi
+cod_cliente
+cod_loja
+cod_ notaFiscal(PK)
+cod_venda(FK)
+cod_endereco
+
+================================================
+
+tabela Pedido
+codigo_pedido
+cod_cliente
+Data do Pedido
+Data de Entrega
+Data envio
+Via
+Frete
+Nome do Destinatario
+Endereço do Destinaratio
+Cidade de destino
+Regiao de Destino
+CEP de Destino
+País de Destino
+===========================================
+
+Tabela Via
+Codigo_Via(PK)
+Transporte aereo
+Transporte maritimo
+transporte ferroviario
+==========================================
+Tabela Fornecedor
+Codigo_fornecedor(PK)
+codigo_loja
+Nome
+Razao social
+CNPJ
+representante
+endereco
+e-mail
+telefone
+data Fornecimento
+
+
+
+
+
+get=> solicita os dados e informações
+post => atualiza inserção de novos dados
+put=>altera atualiza novos dados e registros
+delete=> remove as informações
+
+
+
+
+
+
+
+
+
+https://www.devmedia.com.br/jstl-aplicacoes-web-simples-e-facil-em-java/3746
+
+
+<%! %> essa tag é uma declaration==> declaração
+<%= %> essa tag é uma expression, retorna valor, exibi algo na tela, tag de expressão
+<% %> essa tag é a script dentro dela vai a condição da lógica     
+c: out => imprimi algo na tela
+c: set => inicia uma variavel 
+c:if=> faz a condição lógica   
+c: choose => estrutura de repetição, semelhante ao switch/case
+
+
+
+ <div class="background-recuperarsenha p-3">
+        <div class="container d-flex justify-content-center background-recuperarsenha">
+            <!-- Begin container from Recuperar Senha -->
+            <div class="col-12 col-md-8 col-lg-4 d-flex justify-content-center shadow shadow-container mt-5 mb-5 p-3 background-container-recuperarsenha">
+                <form class="col-12 col-md-6 col-lg-10 px-2">
+                    <div class="text-center mb-4">
+                        <h3 class="font-title-recuperarsenha">Calculadora</h3>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12 w-100" data-validate="Valid email is required: ex@abc.xyz">
+                        <label class="label font-login font-recuperarsenha" for="name">Valor 1:</label>
+                        <input class="w-100 mb-2" type="text" name="text"/> 
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-12 w-100" data-validate="Password is required">
+                        <label class="label font-login font-recuperarsenha" for="name">Valor 2:</label>
+                        <input class="w-100 mb-4" type="text" name="text"/> 
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+  <button class="btn btn-dark me-md-2" type="button">Limpar</button>
+  <button class="btn btn-dark" type="button">Somar</button>
+</div>
+                </form>
+            </div>
+          
+        </div>
+    </div>
+============================================================================================
+
+
+
+FORNECEDOR
+ESTOQUE
+COMBUSTIVEL
+CAMBIO
+COR
+MARCA
+MOTOR
+DESTAQUE
+VEICULO
+PEDIDO
+VEICULO_PEDIDO
+STATUS
+AGENDAMENTO
+ENDERECO
+CLIENTE
+ENDERECO_CLIENTE
+LOGIN
+CARTAO
+MODALIDADE
+CARTAO_CLIENTE
+FORMA_PAGAMENTO
+FRETE
+BOLETO
+VIA
+ITEM_NF
+CABECALHO_NF
+NATUREZA_OPERACAO
+LOJA
+
+
+
+letra maiuscula em java representa uma classe
+String
+Integer
+Double
+....
+
+
+
+===================================================
+
+tabela pedido
+data de entrega =: previsao de entrega smallint 
+
+tabela Veiculo pedido
+alterar tudo...
+
+tabela favorito
+acrescentar
+
+===============================================================================
+
+
+create table produto
+(
+	codigo_produto smallint not null,
+	codigo_barra varchar(13) not null,
+	descricao_produto varchar(100) not null,
+	codigo_categoria smallint not null,
+	codigo_setor smallint not null,
+	codigo_forma_farmaceutica smallint null,
+	codigo_produto_status smallint not null,
+	peso_kg decimal(6,3) not null,
+	volume_cm3 decimal(6,3) not null
+	--precisamos informar quem são as pk e fk. 
+
+	primary key (codigo_produto),
+	foreign key (codigo_categoria) references categoria (codigo_categoria),
+	foreign key (codigo_setor) references setor (codigo_setor),
+	foreign key (codigo_forma_farmaceutica) references forma_farmaceutica (codigo_forma_farmaceutica),
+	foreign key (codigo_produto_status) references produto_status (codigo_produto_status)
+
+	--no SQL, chave alternativa chamará de unique key
+
+	unique key(codigo_barra)
+)
+;
+
+===============================================================================================
+
+wanderson =>
+
+
+create table tb_natureza_op (
+	
+		cod_natureza_operacao SMALLINT NOT NULL
+		descricao_natureza_operacao VARCHAR (50) NOT NULL
+
+		primary key (cod_natureza_operacao)
+		
+);
+
+
+
+create table tb_item_nf (
+	
+		cod_iten_nf  INT NOT NULL
+		cod_nota INT NOT NULL
+		preco_veiculo DECIMAL (12,2) NOT NULL
+		percentual_icms DECIMAL (2,2) NOT NULL
+		valor_icms DECIMAL (12,2) NOT NULL
+
+		primary key (cod_iten_nf),
+		foreign key (cod_nota) references tb_cabecalho_nf (cod_nota)
+		
+
+);
+
+
+create table tb_endereco (	
+
+		cod_endereco  INT NOT NULL
+		cep_endereco VARCHAR(10) NOT NULL
+		rua_endereco VARCHAR(50) NOT NULL
+		complemento VARCHAR(30) NOT NULL
+		numero_endereco VARCHAR(10) NOT NULL
+		cidade VARCHAR(30) NOT NULL
+		uf VARCHAR(2) NOT NULL
+
+		primary key (cod_endereco),
+		foreign key (cod_nota) references tb_cabecalho_nf (cod_nota)
+		
+
+);
+============================================================================================
+
+
+fornecedor => ok
+combustivel => ok
+camio => ok
+cor => ok
+marca => ok
+motor => ok
+veiculo => ok
+cliente => ok
+endereco=> ok
+endereco cliente => ok
+modalidade cartao => ok
+cartao => ok
+loja => nao foi
+natureza operacao => ok
+frete => ok
+status => ok
+boleto => nao foi 
+forma de pagamento => nao foi
+pedido => nao foi 
+item pedido => nao foi 
+cabecalho => nao foi 
+item_nf => nao foi
+
+=========================
+
+3º Guilherme
+
+    - PEDIDO    
+    - FRETE
+    - FORMA DE PAGAMENTO 
+    - BOLETO
+    - ITEM PEDIDO
+    - STATUS PEDIDO
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

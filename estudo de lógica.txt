@@ -1,0 +1,100 @@
+
+private static double total = 0;
+private static int produtos = 10;
+private static int quantidade = 15;
+private static String nome = "Alex Fernando";
+private static idade = 31;
+
+if(idade == 31 ){
+system.out.println("nome");
+}
+
+idade = 33;
+
+if(idade == 33){
+nome += " Egidio";
+system.out.println("nome");
+}
+
+
+total = produtos * quantidade;
+system.out.prinln("total");
+
+150
+
+total = (produtos * quantidade) * 5;
+system.out.prinln("total");
+
+750
+
+Alex Fernando
+Alex fernando Egidio
+
+OPERADORES ARITMÉTICOS 
+
+double numero1 = 50;
+double numero2 = 78;
+
+System.out.println(" Adição = " + (numero1 + numero2));
+
+System.out.println("Subtração " + (numero1 - numero2));
+
+System.out.println("Multiplicação " + (numero1 + numero2));
+
+System.out.println("Divisao " + (numero1 + numero2));
+
+OPERADORES RELACIONAIS
+
+TRUE = SIM
+FALSE = NÃO
+
+SE SIM FAZ A 
+SE NAO FAZ B 
+
+IGUAL A ==
+DIFERENTE DE <> ISSO É PARA BANCO DE DADOS E OUTRAS LINGUAGENS
+MAIOR QUE >
+MENOR QUE <
+MAIOR OU IGUAL A >=
+MENOR OU IGUAL A <=
+
+SIMBOLO DE DIFERENTE != 
+
+int numero1 = 10;
+int numero2 = 20;
+
+if(numero1 == numero2){
+	system.out.println("Eba os numeros sao iguais");
+
+} else {
+	system.out.println("Que pena os numeros nao sao iguais");
+
+}
+
+}
+
+OPERADORES LÓGICOS
+
+OU EM JAVA | OU ||
+OU EM SQL OR
+E EM JAVA & OU &&
+E EM SQL AND
+UNIÃO C & C | C
+
+
+// uma barrinha | verifica todas as condições, duas barrinhas || a partir do momento que uma condição for falsa, negativa o resto já não é verificado
+// mesma lógica para & / && 
+
+boolean numero1 = true;
+boolean numero2 = false;
+boolaen numero3 = true;
+
+if(numero1 && numero2 | numero3){  
+	system.out.println("entrou na condição");
+
+}
+
+if(numero1 && numero2 || numero3){
+	system.out.println("entrou na condição");
+}
+

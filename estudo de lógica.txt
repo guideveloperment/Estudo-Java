@@ -98,3 +98,5 @@ if(numero1 && numero2 || numero3){
 	system.out.println("entrou na condição");
 }
 
+
+

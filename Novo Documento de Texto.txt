@@ -1,0 +1,71 @@
+<div id="flush-collapse-${a.cod_agendamento}"
+									class="accordion-collapse collapse"
+									aria-labelledby="flush-heading-${a.cod_agendamento}"
+									data-bs-parent="#accordionFlushExample">
+									<div class="accordion-body">
+										<div class="row">
+											<div class="col-md">
+												<div class="cliente">
+													<h3 class="">Cliente</h3>
+													<p class="">NOME: <c:out value="${a.nome_cliente}" /><c:out value="${a.razao_social}" /></p>
+													<p class="">CPF/CNPJ: <c:out value="${a.numero_documento}" /></p>
+													<p class="">EMAIL: <c:out value="${a.email_cliente}" /></p>
+													<p class="">TELEFONE: <c:out value="${a.telefone_cliente}" /></p>
+												</div>
+											</div>
+
+											<div class="col-md">
+											<h3 class="">Detalhes do veículo</h3>
+												<p class="">Motor: <c:out value="${a.motor_veiculo}" /></p>
+												<p class="">Potência: <c:out value="${a.potencia_cv}" /></p>
+												<p class="">Combustível: <c:out value="${a.tipo_combustivel}" /></p>
+												<p class="">Câmbio: <c:out value="${a.cambio}" /></p>
+												<p class="" id="">Chassi: <c:out value="${a.numero_chassi}" /></p>
+											</div>
+
+											<div class="col-md-3">
+												<h3 class="tex-end">Taxa de agendamento: </h3>
+												<p class="text-start">R$ <fmt:formatNumber type="number" maxFractionDigits="2" minFractionDigits="2" value="${a.taxa_agendamento}" /></p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+
+
+======================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
